@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FDDAD283-71AA-487C-B725-9FB8670C9DDF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Library_Mgmt</RootNamespace>
+    <AssemblyName>Library_Mgmt</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Book_Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Book_Stock.Designer.cs">
+      <DependentUpon>Book_Stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Change_password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Change_password.Designer.cs">
+      <DependentUpon>Change_password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlbVariable.cs" />
+    <Compile Include="Issue_Book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Issue_Book.Designer.cs">
+      <DependentUpon>Issue_Book.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI_Main.Designer.cs">
+      <DependentUpon>MDI_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BookL_Details.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookL_Details.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BookL_Details.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookL_Details.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BookL_Details.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookL_Details.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Book_Detail.cs">
+      <DependentUpon>BookL_Details.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Details_Result.cs">
+      <DependentUpon>StoreP_Details.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DueBook_Result.cs">
+      <DependentUpon>StoreP_Details.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\IssueL_Details.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IssueL_Details.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\IssueL_Details.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IssueL_Details.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\IssueL_Details.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IssueL_Details.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Issue_Book_Detail.cs">
+      <DependentUpon>IssueL_Details.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\StoreP_Details.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StoreP_Details.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\StoreP_Details.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StoreP_Details.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\StoreP_Details.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StoreP_Details.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\StudentL_Details.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentL_Details.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\StudentL_Details.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentL_Details.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\StudentL_Details.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentL_Details.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Student_Detail.cs">
+      <DependentUpon>StudentL_Details.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\UserL_Details.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserL_Details.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\UserL_Details.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserL_Details.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\UserL_Details.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserL_Details.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\User_Detail.cs">
+      <DependentUpon>UserL_Details.tt</DependentUpon>
+    </Compile>
+    <Compile Include="New_Book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="New_Book.Designer.cs">
+      <DependentUpon>New_Book.cs</DependentUpon>
+    </Compile>
+    <Compile Include="New_Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="New_Student.Designer.cs">
+      <DependentUpon>New_Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="New_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="New_User.Designer.cs">
+      <DependentUpon>New_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Return_Book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Return_Book.Designer.cs">
+      <DependentUpon>Return_Book.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_Books.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_Books.Designer.cs">
+      <DependentUpon>View_Books.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View_Students.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View_Students.Designer.cs">
+      <DependentUpon>View_Students.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Book_Stock.resx">
+      <DependentUpon>Book_Stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Change_password.resx">
+      <DependentUpon>Change_password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Issue_Book.resx">
+      <DependentUpon>Issue_Book.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI_Main.resx">
+      <DependentUpon>MDI_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New_Book.resx">
+      <DependentUpon>New_Book.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New_Student.resx">
+      <DependentUpon>New_Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New_User.resx">
+      <DependentUpon>New_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Return_Book.resx">
+      <DependentUpon>Return_Book.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Books.resx">
+      <DependentUpon>View_Books.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View_Students.resx">
+      <DependentUpon>View_Students.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Model\StoreP_Details.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>StoreP_Details.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Model\BookL_Details.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BookL_Details.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\BookL_Details.edmx.diagram">
+      <DependentUpon>BookL_Details.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="Model\IssueL_Details.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>IssueL_Details.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\IssueL_Details.edmx.diagram">
+      <DependentUpon>IssueL_Details.edmx</DependentUpon>
+    </None>
+    <None Include="Model\StoreP_Details.edmx.diagram">
+      <DependentUpon>StoreP_Details.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="Model\StudentL_Details.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>StudentL_Details.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\StudentL_Details.edmx.diagram">
+      <DependentUpon>StudentL_Details.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="Model\UserL_Details.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>UserL_Details.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\UserL_Details.edmx.diagram">
+      <DependentUpon>UserL_Details.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\BookL_Details.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BookL_Details.edmx</DependentUpon>
+      <LastGenOutput>BookL_Details.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\BookL_Details.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BookL_Details.edmx</DependentUpon>
+      <LastGenOutput>BookL_Details.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\IssueL_Details.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>IssueL_Details.edmx</DependentUpon>
+      <LastGenOutput>IssueL_Details.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\IssueL_Details.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>IssueL_Details.edmx</DependentUpon>
+      <LastGenOutput>IssueL_Details.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\StoreP_Details.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>StoreP_Details.edmx</DependentUpon>
+      <LastGenOutput>StoreP_Details.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\StoreP_Details.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>StoreP_Details.edmx</DependentUpon>
+      <LastGenOutput>StoreP_Details.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\StudentL_Details.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>StudentL_Details.edmx</DependentUpon>
+      <LastGenOutput>StudentL_Details.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\StudentL_Details.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>StudentL_Details.edmx</DependentUpon>
+      <LastGenOutput>StudentL_Details.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\UserL_Details.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>UserL_Details.edmx</DependentUpon>
+      <LastGenOutput>UserL_Details.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\UserL_Details.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>UserL_Details.edmx</DependentUpon>
+      <LastGenOutput>UserL_Details.cs</LastGenOutput>
+    </Content>
+    <Content Include="Resources\CLOSE.png" />
+    <Content Include="Resources\icons8-collapse-arrow-16.png" />
+    <Content Include="Resources\Logout_26.png" />
+    <Content Include="Resources\power_button_26.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
